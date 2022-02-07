@@ -3,3 +3,5 @@ $(document).ready(function(){
         $(".navbar-toggler").click();
       });
 });
+
+//Este es un cambio
