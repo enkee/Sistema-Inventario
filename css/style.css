@@ -43,9 +43,9 @@
     line-height: 0;
 
 }
- 
+
 /* NavBar*/
-#navbar{
+#navbar {
     padding-top: 0.813rem;
     padding-bottom: 0.813rem;
 }
@@ -56,35 +56,59 @@
     justify-content: flex-end;
 }
 
-#comandos{
+#comandos {
     flex: 1 1 auto;
     display: flex;
     justify-content: space-between;
     line-height: 0;
 }
 
-.navbar-brand{
+.navbar-brand {
     line-height: 1rem;
 }
 
-.navbar-brand input{
-    margin-right: 5px;
+.navbar-brand input {
+    margin-right: 0.5rem;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     width: 20px;
     height: 30px;
-   margin-left: 25px;
-   padding: 0;
-   border: 0;
-   font-size: 1.8rem;
+    margin-left: 25px;
+    padding: 0;
+    border: 0;
+    font-size: 1.8rem;
 }
 
-.btn-bar{
+.btn-bar {
     font-size: 1.6rem;
     margin: 0;
     padding: 0;
     line-height: 0;
+    text-decoration: none;
+    color: rgb(114, 114, 114);
+}
+
+.btn-bar span {
+    display: none;
+}
+
+.btn-bar div {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+#opciones a {
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+#footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 /*================================
@@ -92,29 +116,45 @@ MEDIAS QUERY
 ==================================*/
 /* Pantalla Grande*/
 @media (min-width: 992px) {
-    #opciones{
-        flex: 1 1 auto; 
+    #navbar {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
     }
+    #opciones {
+        flex: 1 1 auto;
+    }
+
     #exit {
         /*background-color: rgba(184, 8, 37, 0.5);*/
         flex: 0 1 auto;
         display: flex;
         justify-content: flex-end;
     }
-    #comandos{
+
+    #comandos {
         flex: 0.5 1 auto;
         display: flex;
         justify-content: space-between;
-        line-height: 0;
-    }
-    
-    #navbarNavAltMarkup{
-        margin-left: 3rem;
-        flex:0.5 1 auto;
     }
 
-    #navbar{
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+    #navbarNavAltMarkup {
+        flex: 0.5 1 auto;
     }
+
+
+    .btn-bar span {
+        display: inline-block;
+        font-size: 0.8rem;
+        margin-left: 0.3rem;
+        
+    }
+
+    #opciones a {
+        margin-left: 2rem;
+  
+    }
+   a.nav.link{
+    margin: 0px;
+   }
+
 }
