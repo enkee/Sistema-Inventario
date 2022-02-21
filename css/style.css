@@ -1,9 +1,14 @@
+/*===================================================
+MOBILE FIRST
+=====================================================*/
+/* General */
 #contenedor {
     background-color: coral;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-top: 56px;
     height: calc(100vh - 25px - 56px);
 }
 
@@ -16,21 +21,20 @@
     background-color: darkcyan;
 }
 
-#footer {
-    height: 25px;
-    background-color: aliceblue;
-}
 
 .ir-nuevo {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     font-size: 3rem;
-    text-decoration: none;
     z-index: 99999;
     line-height: 0;
-    /*transition: all .5s ease;*/
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+}
 
+.ir-nuevo:hover{
+    color:  rgb(114, 114, 114);
 }
 
 .ir-copy {
@@ -46,115 +50,135 @@
 
 /* NavBar*/
 #navbar {
-    padding-top: 0.813rem;
-    padding-bottom: 0.813rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position:fixed;
+    top: 0;
+    width: 100%;
 }
 
+
+/* NavBar Comandos */
+#comandos {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#comandos .navbar-brand  {
+    margin-right: 0rem;
+}
+
+#comandos .navbar-brand input {
+    margin-right: 0.5rem;
+}
+
+#comandos .btn-bar {
+    font-size: 1.3rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    padding: 0;
+    text-decoration: none;
+    color: rgb(114, 114, 114);
+    line-height: 1rem;
+}
+
+#comandos .btn-bar span {
+    display: none;
+    font-size: 1rem;
+}
+
+
+/* NavBar Toggler (boton) */
+.navbar-toggler {
+    width: 20px;
+    height: 30px;
+    margin-left: 1.5rem;
+    padding: 0;
+    border: 0;
+    font-size: 1.8rem;
+}
+
+/* NavBar Opciones */
+#opciones .nav-link {
+    font-size: 1.3rem;
+    line-height: 0;
+    text-decoration: none;
+    color: rgb(114, 114, 114);
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#opciones .nav-link span {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Salir*/
 #exit {
     flex: 1 1 auto;
     display: flex;
     justify-content: flex-end;
 }
 
-#comandos {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: space-between;
-    line-height: 0;
-}
-
-.navbar-brand {
-    line-height: 1rem;
-}
-
-.navbar-brand input {
-    margin-right: 0.5rem;
-}
-
-.navbar-toggler {
-    width: 20px;
-    height: 30px;
-    margin-left: 25px;
-    padding: 0;
-    border: 0;
-    font-size: 1.8rem;
-}
-
-.btn-bar {
-    font-size: 1.6rem;
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    text-decoration: none;
-    color: rgb(114, 114, 114);
-}
-
-.btn-bar span {
-    display: none;
-}
-
-.btn-bar div {
-    display: inline-block;
-    font-size: 1rem;
-    margin-left: 0.5rem;
-}
-
-#opciones a {
-    margin-left: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-}
-
+/* Footer */
 #footer {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    height: 25px;
+    background-color: aliceblue;
 }
-
 /*================================
-MEDIAS QUERY
+DESKTOP
 ==================================*/
 /* Pantalla Grande*/
 @media (min-width: 992px) {
+
+    /* Navbar */
     #navbar {
-        padding-top: 0rem;
-        padding-bottom: 0rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
+
+    /* Seccion de Comandos */
+    #comandos {
+        flex: 0.5 1 auto;
+        display: flex;
+        justify-content: space-between;;
+    }
+
+    #comandos .btn-bar span {
+        display: inline-block;
+        margin-left: 0.3rem;
+    }
+
+    /* Seccion de Opciones */
+    #navbarNavAltMarkup {
+        flex: 0.5 1 auto;
+    }
+
     #opciones {
         flex: 1 1 auto;
     }
 
+    #opciones .nav-link {
+        margin-left: 2rem;
+        padding: 0;
+    }
+
+    #opciones .nav-link span {
+        display: inline-block;
+        margin-left: 0.3rem;
+        padding: 0;
+    }
+
+    /* Salir*/
     #exit {
         /*background-color: rgba(184, 8, 37, 0.5);*/
         flex: 0 1 auto;
         display: flex;
         justify-content: flex-end;
     }
-
-    #comandos {
-        flex: 0.5 1 auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #navbarNavAltMarkup {
-        flex: 0.5 1 auto;
-    }
-
-
-    .btn-bar span {
-        display: inline-block;
-        font-size: 0.8rem;
-        margin-left: 0.3rem;
-        
-    }
-
-    #opciones a {
-        margin-left: 2rem;
-  
-    }
-   a.nav.link{
-    margin: 0px;
-   }
 
 }

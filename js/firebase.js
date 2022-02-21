@@ -10,5 +10,12 @@ const firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+  // Authenticacion de Firebase
   const auth = firebase.auth();
+
+  //Base de Datos de Firebase
+  const db = firebase.firestore();
+
+  // Agregar 
   
