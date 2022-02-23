@@ -200,7 +200,7 @@ MOBILE FIRST
 #cont-cod-int input, #cont-cod-ugel input{
     margin-right: 1rem;
     display: block;
-    width: 240px !important;
+    width: 220px !important;
     flex: 0.9 1 1;
 }
 
