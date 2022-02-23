@@ -69,14 +69,21 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="task-form">
-                        <input type="text" id="cod-int" class="form-control mb-3" placeholder="Cod. Int" autofocus /><i class="fa-solid fa-barcode"></i>
-                        <input type="text" id="cod-ugel" class="form-control mb-3" placeholder="Cod. UGEL" autofocus /><i class="fa-solid fa-barcode"></i>
+                    <form id="bien-form">
+                        <div id="cont-cod-int"><input type="text" id="cod-int" class="form-control mb-3" placeholder="Cod. Int" autofocus /><button><i class="fa-solid fa-barcode"></i></button></div>
+                        <div id="cont-cod-ugel"><input type="text" id="cod-ugel" class="form-control mb-3" placeholder="Cod. UGEL" autofocus /><button><i class="fa-solid fa-barcode"></i></button></div>
                         <input type="text" id="bien-desc" class="form-control mb-3" placeholder="Descripción Bien" autofocus />
-                        <input type="text" id="bien-tipo" class="form-control mb-3" placeholder="Tipo Bien" autofocus />
+                        <select id="bien-tipo" class="form-select mb-3">
+                            <option selected>&lt;Seleccione&gt;</option>
+                            <option value="1">Mueble</option>
+                            <option value="2" >Maquinaria</option>
+                            <option value="3">Equipo</option>
+                            <option value="5" >Herramienta</option>
+                            <option value="6" >Utencilio</option>
+                        </select>
                         <input type="text" id="bien-ubi" class="form-control mb-3" placeholder="Ubicación Bien" autofocus />
                         <input type="text" id="fec-ingreso" class="form-control mb-3" placeholder="Fecha Ingreso" autofocus />
-                        <input type="text" id="fec-salida" class="form-control mb-3" placeholder="Fecha Ingreso" autofocus />
+                        <input type="text" id="fec-salida" class="form-control mb-3" placeholder="Fecha Salida" autofocus />
                         <label>checkeado: </label><input type="checkbox" id="checkeado" value="second_checkbox">
                         <hr>
                         <input type="text" id="bien-marca" class="form-control mb-3" placeholder="Marca Bien" autofocus />

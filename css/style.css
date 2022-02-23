@@ -184,6 +184,39 @@ MOBILE FIRST
     margin: 0;
     padding: 0;
 }
+
+#cont-cod-int, #cont-cod-ugel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+#cont-cod-int button, #cont-cod-ugel button {
+    height: 38px;
+    background-color: blueviolet;
+    line-height: 1rem;
+    border-radius: 5px;
+    
+}
+#cont-cod-int input, #cont-cod-ugel input{
+    margin-right: 1rem;
+}
+
+#bien-form select{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#bien-form select option{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    max-width: 100%;
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+}
 /*================================
 DESKTOP
 ==================================*/
@@ -201,7 +234,6 @@ DESKTOP
         flex           : 0.5 1 auto;
         display        : flex;
         justify-content: space-between;
-        ;
     }
 
     #comandos .btn-bar span {
