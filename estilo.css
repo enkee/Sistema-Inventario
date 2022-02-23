@@ -1,0 +1,23 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffa500;
+    width: 900px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.contenedor div{
+    border: 1px black solid;
+    padding: 10px;
+    margin: 5px;
+}
+#caja1{
+    flex: 1 0 auto;
+}
+#caja2{
+    flex: 1 0 auto;
+}
+#caja3{
+
+}

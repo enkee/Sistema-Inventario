@@ -21,9 +21,8 @@ auth.onAuthStateChanged((user) => {
 var listadoBienes = $("#pnl-listado");
 
 //* Leer bienes
-function readBienes() {
-  db.collection("Bienes").where("Amb","==","T03").get().then((bienesRef) => {
-    console.log(bienesRef.docs)
+async function readBienes() {
+  await db.collection("Bienes").where("Amb","==","T03").get().then((bienesRef) => {
     listBienes(bienesRef.docs);
   });
 }
@@ -38,16 +37,23 @@ function listBienes(data) {
     data.forEach(document => {
       let doc = document.data();
       const divPost = `
-                    <div style='border:solid 2px;'>
-                        <h5>${doc.Desc}</h5><br>
-                        <span>Cod.Int.: ${doc.CodInt}</span>
-                        <span>Cod.UGEL.: ${doc.CodUgel}</span>
-                        <span>Cant.: ${doc.Cant}</span><br>
-                        <span><strong>${doc.Amb}</strong></span>
-                        <span>Color: ${doc.color}</span>
-                        <span>Dimen: ${doc.dimen}</span>
+                    <div class="item">
+                        <div class="item-img">
+                          <i class="fa-solid fa-image"></i>
+                        </div>
+                        <div class="item-data">
+                          <h9>${doc.Desc}</h9><br>
+                          <span>INT.: ${doc.CodInt}</span>
+                          <span>UGEL.: ${doc.CodUgel}</span><br>
+                          <span><strong>${doc.Amb}</strong></span>
+                          <span>C.: ${doc.color}</span>
+                          <span>D.: ${doc.dimen}</span>
+                        </div>
+                        <div class="item-cant">
+                          <span>${doc.Cant}</span><br>
+                          <span>uni</span><br>
+                        </div>
                     </div>
-                  
                 `;
       content += divPost;
     });

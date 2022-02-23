@@ -2,71 +2,94 @@
 MOBILE FIRST
 =====================================================*/
 /* General */
-#contenedor {
-    background-color: coral;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-top: 56px;
-    height: calc(100vh - 25px - 56px);
-}
-
 #pnl-ingreso {
     background-color: cyan;
-    display: block;
+    display         : block;
 }
 
+/* LISTADO DE BIENES*/
 #pnl-listado {
-    background-color: darkcyan;
+    /*display: none;*/
+    background-color: aquamarine;
+    margin-top      : calc(56px + 30.0625px);
+    margin-bottom   : 25px;
+    display         : flex;
+    flex-direction  : column;
 }
 
+.item {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    border-bottom : black 2px solid;
+    line-height   : 1.15rem;
+    padding-top   : 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.item-img {
+    font-size: 3rem;
+    margin   : 0.5rem;
+}
+
+.item-data {
+    flex: 1 1 auto;
+}
+
+.item-cant {
+    text-align: center;
+    margin    : 0.5rem;
+}
 
 .ir-nuevo {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    font-size: 3rem;
-    z-index: 99999;
+    position   : fixed;
+    bottom     : 1rem;
+    right      : 1rem;
+    font-size  : 3em;
+    z-index    : 99;
     line-height: 0;
-    color: rgb(114, 114, 114);
-    text-decoration: none;
+    color      : rgb(114, 114, 114);
 }
 
-.ir-nuevo:hover{
-    color:  rgb(114, 114, 114);
-}
-
-.ir-copy {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 5.5rem;
-    font-size: 1.8rem;
-    text-decoration: none;
-    z-index: 99999;
+.nuevo-carpeta {
+    position   : fixed;
+    bottom     : 1rem;
+    right      : 5.8rem;
+    font-size  : 2.5rem;
+    z-index    : 99;
     line-height: 0;
-
+    color      : rgb(114, 114, 114);
 }
+
 
 /* NavBar*/
 #navbar {
-    padding-top: 0.5rem;
+    padding-top   : 0.5rem;
     padding-bottom: 0.5rem;
-    position:fixed;
-    top: 0;
-    width: 100%;
+    position      : fixed;
+    top           : 0;
+    width         : 100%;
+    z-index       : 999;
+    box-shadow    : 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 
 /* NavBar Comandos */
 #comandos {
-    flex: 1 1 auto;
-    display: flex;
+    flex           : 1 1 auto;
+    display        : flex;
     justify-content: space-between;
 }
 
-#comandos .navbar-brand  {
-    margin-right: 0rem;
+#comandos .navbar-brand {
+    margin: 0px;
+}
+
+#comandos .navbar-brand h1 {
+    font-size: 1.5rem;
+    /*line-height: 1rem;*/
+    margin: 0;
+    padding: 0;
 }
 
 #comandos .navbar-brand input {
@@ -74,60 +97,92 @@ MOBILE FIRST
 }
 
 #comandos .btn-bar {
-    font-size: 1.3rem;
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
-    padding: 0;
+    font-size      : 1.3rem;
+    margin-top     : 0.6rem;
+    margin-bottom  : 0.6rem;
+    padding        : 0;
     text-decoration: none;
-    color: rgb(114, 114, 114);
-    line-height: 1rem;
+    color          : rgb(114, 114, 114);
+    line-height    : 1rem;
 }
 
 #comandos .btn-bar span {
-    display: none;
+    display  : none;
     font-size: 1rem;
 }
 
 
 /* NavBar Toggler (boton) */
 .navbar-toggler {
-    width: 20px;
-    height: 30px;
-    margin-left: 1.5rem;
-    padding: 0;
-    border: 0;
-    font-size: 1.8rem;
+    width       : 20px;
+    height      : 30px;
+    margin-left : 1.5rem;
+    margin-right: 0rem;
+    padding     : 0;
+    border      : 0;
+    font-size   : 1.8rem;
 }
 
 /* NavBar Opciones */
 #opciones .nav-link {
-    font-size: 1.3rem;
-    line-height: 0;
+    font-size      : 1.3rem;
+    line-height    : 0;
     text-decoration: none;
-    color: rgb(114, 114, 114);
-    margin-left: 0rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    color          : rgb(114, 114, 114);
+    margin-left    : 0rem;
+    margin-top     : 0.5rem;
+    margin-bottom  : 0.5rem;
 }
 
 #opciones .nav-link span {
     margin-left: 0.5rem;
-    font-size: 1rem;
+    font-size  : 1rem;
 }
 
 /* Salir*/
 #exit {
-    flex: 1 1 auto;
-    display: flex;
+    flex           : 1 1 auto;
+    display        : flex;
     justify-content: flex-end;
+}
+
+#bar-navegacion {
+    background-color: burlywood;
+    padding-top     : 0.19rem;
+    padding-bottom  : 0.19rem;
+    padding-left    : 0.6rem;
+    padding-right   : 0.5rem;
+    position        : fixed;
+    top             : 56px;
+    width           : 100%;
+    z-index         : 99;
+    font-size       : 1rem;
+    box-shadow      : 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 #footer {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    height: 25px;
+    width           : 100%;
+    position        : fixed;
+    bottom          : 0;
+    padding-left    : 0.5rem;
+    padding-right   : 0.5rem;
+    height          : 25px;
     background-color: aliceblue;
+    z-index         : 9;
+    box-shadow      : 2px -2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario Nuevo Bien */
+.modal-header{
+    margin: 0;
+    padding: 0.9rem;
+}
+
+.modal-header h3{
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
 }
 /*================================
 DESKTOP
@@ -137,19 +192,20 @@ DESKTOP
 
     /* Navbar */
     #navbar {
-        padding-top: 0.5rem;
+        padding-top   : 0.5rem;
         padding-bottom: 0.5rem;
     }
 
     /* Seccion de Comandos */
     #comandos {
-        flex: 0.5 1 auto;
-        display: flex;
-        justify-content: space-between;;
+        flex           : 0.5 1 auto;
+        display        : flex;
+        justify-content: space-between;
+        ;
     }
 
     #comandos .btn-bar span {
-        display: inline-block;
+        display    : inline-block;
         margin-left: 0.3rem;
     }
 
@@ -164,21 +220,26 @@ DESKTOP
 
     #opciones .nav-link {
         margin-left: 2rem;
-        padding: 0;
+        padding    : 0;
     }
 
     #opciones .nav-link span {
-        display: inline-block;
+        display    : inline-block;
         margin-left: 0.3rem;
-        padding: 0;
+        padding    : 0;
     }
 
     /* Salir*/
     #exit {
         /*background-color: rgba(184, 8, 37, 0.5);*/
-        flex: 0 1 auto;
-        display: flex;
+        flex           : 0 1 auto;
+        display        : flex;
         justify-content: flex-end;
     }
 
+    #pnl-listado {
+        margin-left : auto;
+        margin-right: auto;
+        width       : 992px;
+    }
 }
