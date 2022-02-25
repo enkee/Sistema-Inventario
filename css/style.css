@@ -86,10 +86,10 @@ MOBILE FIRST
 }
 
 #comandos .navbar-brand h1 {
-    font-size: 1.5rem;
+    font-size    : 1.5rem;
     /*line-height: 1rem;*/
-    margin: 0;
-    padding: 0;
+    margin       : 0;
+    padding      : 0;
 }
 
 #comandos .navbar-brand input {
@@ -174,34 +174,147 @@ MOBILE FIRST
 }
 
 /* Formulario Nuevo Bien */
-.modal-header{
-    margin: 0;
+#obligatorio{
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.modal-header {
+    margin : 0;
     padding: 0.9rem;
 }
 
-.modal-header h3{
+.modal-header h3 {
     font-size: 1.3rem;
-    margin: 0;
-    padding: 0;
+    margin   : 0;
+    padding  : 0;
 }
 
-#cont-cod-int, #cont-cod-ugel{
+.formulario div{
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+.formulario div span {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.bien-cod div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
+.bien-cod button {
+    height: 40px;
+    width: 40px;
+    background-color: blueviolet;
+    line-height     : 1rem;
+    border-radius   : 5px;
     font-size: 1.5rem;
 }
-#cont-cod-int button, #cont-cod-ugel button {
-    height: 38px;
-    background-color: blueviolet;
-    line-height: 1rem;
+
+.formulario .fechas {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+}
+
+.bien-img {
+    display        : flex;
+    flex-direction : row;
+    justify-content: center !important;
+    border         : 1px rgb(150, 150, 150) solid;
+    font-size      : 1.5rem;
+    position: relative;
+}
+
+.bien-img .img-plus {
+    position: absolute;
+    top     : 1rem;
+    left   : 1rem;
+}
+
+.bien-img .img-del {
+    position: absolute;
+    top     : 1rem;
+    right   : 1rem;
+}
+
+.bien-img img {
+    width : 300px;
+    height: auto;
+    margin: auto;
+}
+
+.bien-snap {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+.formulario .imagenes {
+    display       : flex;
+    flex-direction: row;
+    flex-wrap     : nowrap;
+    align-items   : center;
+    overflow      : auto;
+    /* overflow      : scroll;
+    overflow-y    : hidden;
+    overflow-x    : scroll;*/
+    margin-right  : 0.7rem;
+    border        : 1px grey solid;
+}
+
+.formulario .imagenes img {
+    width       : 70px;
+    height      : 70px;
+    border      : 1px rgb(155, 155, 155) solid;
+    margin-right: .5rem;
+
+}
+
+.formulario .img-comand {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: space-between;
+    font-size      : 1.5rem;
+
+}
+
+.formulario .img-comand button {
+    width        : 40px;
+    height       : 40px;
+    margin-top   : 5px;
+    margin-bottom: 5px;
     border-radius: 5px;
 }
-#cont-cod-int input, #cont-cod-ugel input{
-    margin-right: 1rem;
-    display: block;
-    width: 220px !important;
-    flex: 0.9 1 1;
+
+.formulario .img-comand div {
+    display       : flex;
+    flex-direction: column;
+    width         : 60px;
+    font-size     : 1.5rem;
+    align-content : center;
+    padding-top   : .3rem;
+    padding-bottom: .3rem;
+    border-radius : 5px;
+}
+
+.bien-aceptar {
+    margin-top: 1.5rem;
+    justify-content:flex-start !important;
+}
+
+.bien-aceptar .bien-save {
+    margin-right: 0.7rem;
 }
 
 /*================================

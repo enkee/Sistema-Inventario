@@ -51,7 +51,7 @@
             </div>
         </div>
     </nav>
-    <!-- Listado de Bienes General-->
+    <!-- Barra de Navegacion-->
     <div id="bar-navegacion">
         <i class="fa-solid fa-house"></i>
     </div>
@@ -69,40 +69,109 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="bien-form">
-                        <div id="cont-cod-int"><input type="text" id="cod-int" class="form-control mb-3" placeholder="Cod. Int." autofocus /><button><i class="fa-solid fa-barcode"></i></button></div>
-                        <div id="cont-cod-ugel"><input type="text" id="cod-ugel" class="form-control mb-3" placeholder="Cod. UGEL" autofocus /><button><i class="fa-solid fa-barcode"></i></button></div>
-                        <input type="text" id="bien-desc" class="form-control mb-3" placeholder="Descripción Bien" autofocus />
-                        <select id="bien-tipo" class="form-select mb-3">
-                            <option selected>&lt;Seleccione&gt;</option>
-                            <option value="1">Mueble</option>
-                            <option value="2" >Maquinaria</option>
-                            <option value="3">Equipo</option>
-                            <option value="5" >Herramienta</option>
-                            <option value="6" >Utencilio</option>
-                        </select>
-                        <input type="text" id="bien-ubi" class="form-control mb-3" placeholder="Ubicación Bien" autofocus />
-                        <input type="text" id="fec-ingreso" class="form-control mb-3" placeholder="Fecha Ingreso" autofocus />
-                        <input type="text" id="fec-salida" class="form-control mb-3" placeholder="Fecha Salida" autofocus />
-                        <label>checkeado: </label><input type="checkbox" id="checkeado" value="second_checkbox">
+                    <form class="formulario">
+                        <div class="bien-cod">
+                            <div>
+                                <input type="text" id="cod-int" class="form-control mb-3" placeholder="Cod. Int."
+                                    style="display: inline-block;" />
+                                <span id="obligatorio">*</span>
+                            </div>
+                            <button><i class="fa-solid fa-barcode"></i></button>
+                        </div>
+                        <div class="bien-cod">
+                            <div>
+                                <input type="text" id="cod-ugel" class="form-control mb-3" placeholder="Cod. UGEL" />
+                                <span id="obligatorio">*</span>
+                            </div>
+                            <button><i class="fa-solid fa-barcode"></i></button>
+                        </div>
+                        <div>
+                            <textarea rows="2" class="form-control mb-3" placeholder="Descripción del Bien"
+                                autofocus></textarea>
+                            <span id="obligatorio">*</span>
+                        </div>
+                        <!--<input type="text" id="bien-desc" class="form-control mb-3" placeholder="Descripción Bien"
+                            autofocus />-->
+                        <div>
+                            <select class="form-select mb-3">
+                                <option selected style="color: red;">&lt;Tipo de Bien&gt;</option>
+                                <option value="1">Mueble</option>
+                                <option value="2">Maquinaria</option>
+                                <option value="3">Equipo</option>
+                                <option value="5">Herramienta</option>
+                                <option value="6">Utencilio</option>
+                            </select>
+                            <span id="obligatorio">*</span>
+                        </div>
+                        <div>
+                            <select class="form-select mb-3">
+                                <option selected>&lt;Ubicación del Bien&gt;</option>
+                                <option value="1">T1 - Carpinteria</option>
+                                <option value="2">T2 - Carpinteria</option>
+                                <option value="3">T3 - Estética</option>
+                                <option value="5">T4 - Hosteleria</option>
+                                <option value="6">T5 - Cuero</option>
+                            </select>
+                            <span id="obligatorio">*</span>
+                        </div>
+                        <div class="fechas">
+                            <div>
+                                <label>Fecha de Ingreso:
+                                    <input type="date" class="form-control mb-3"
+                                        placeholder="Fecha Ingreso" />
+                                </label>
+                                <span id="obligatorio" style="margin-top: 1.5rem;">*</span>
+                            </div>
+                            <div>
+                                <label>Fecha de Salida:
+                                    <input type="date" class="form-control mb-3"
+                                        placeholder="Fecha Ingreso" />
+                                </label>
+                                <span id="obligatorio" style="margin-top: 1.5rem;"></span>
+                            </div>
+                        </div>
+                        <label><input type="checkbox"  value="second_checkbox" style="margin-right:0.5rem">check</label>
                         <hr>
-                        <input type="text" id="bien-marca" class="form-control mb-3" placeholder="Marca Bien" autofocus />
-                        <input type="text" id="bien-color" class="form-control mb-3" placeholder="Color Bien" autofocus />
-                        <input type="text" id="bien-dimen" class="form-control mb-3" placeholder="Dimensiones Bien" autofocus />
-                        <input type="text" id="bien-serie" class="form-control mb-3" placeholder="Serie Bien" autofocus />
+                        <input type="text" class="form-control mb-3" placeholder="Marca Bien" />
+                        <input type="text" class="form-control mb-3" placeholder="Color Bien" />
+                        <input type="text" class="form-control mb-3" placeholder="Dimensiones Bien" />
+                        <input type="text" class="form-control mb-3" placeholder="Serie Bien" />
                         <hr>
-                        <textarea id="bien-obs" rows="3" class="form-control mb-3" placeholder="Observaciones"></textarea>
+                        <textarea  rows="3" class="form-control mb-3"
+                            placeholder="Observaciones"></textarea>
                         <label>Imagen: </label>
-                        <label>Camara</label><i class="fa-solid fa-camera"></i>
-                        <label>Archivo</label><i class="fa-solid fa-file-image"></i>
-                        
-                        <button class="btn btn-primary" id="btn-task-form">Save</button>
+                        <div class="bien-img">
+                            <i class="fa-solid fa-magnifying-glass-plus img-plus"></i>
+                            <i class="fa-solid fa-trash-can img-del"></i>
+                            <div>
+                                <img src="./img/img-predeterminado.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="bien-snap">
+                            <div class="imagenes">
+                                <img src="./img/img-predeterminado.jpg" alt="">
+                                <img src="./img/img-predeterminado.jpg" alt="">
+                                <img src="./img/img-predeterminado.jpg" alt="">
+                                <img src="./img/img-predeterminado.jpg" alt="">
+                                <img src="./img/img-predeterminado.jpg" alt="">
+                                <img src="./img/img-predeterminado.jpg" alt="">
+                                <img src="./img/img-predeterminado.jpg" alt="">
+                            </div>
+                            <div class="img-comand">
+                                <button><i class="fa-solid fa-camera"></i></button>
+                                <button><i class="fa-solid fa-file-image"></i></button>
+                            </div>
+                        </div>
+                        <div class="bien-aceptar">
+                            <button class="btn btn-primary bien-save">Save</button>
+                            <button class="btn btn-danger">Cancel</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Formulario nuevo Ambiente/Persona-->
+    <!-- Formulario nueva Carpeta-->
     <div class="modal fade" id="nueva-carpeta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -127,7 +196,7 @@
             </div>
         </div>
     </div>
-    <!-- Formulario nuevo Bien-->
+    <!-- Footer-->
     <div id="footer">
         0 Elementos (0 Seleccionados)
     </div>
