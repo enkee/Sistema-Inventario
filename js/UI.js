@@ -18,4 +18,26 @@ $(document).ready(function () {
     $(this).css("color", "#727272");
   });
 
+  //Mostrar Modal Nuevo Bien, Al presionar el boton Nuevo Bien.
+  $('.ir-nuevo').on('click', function() {
+    //$('#nuevo-bien').modal({ backdrop: 'static',keyboard:false});
+    $('#nuevo-bien').modal('show');
+  });
+
+  //Colocar el cursor al inicio del Formulario Nuevo Bien, Al aparecer el Modal Nuevo Bien
+  $('#nuevo-bien').on('shown.bs.modal', function () {
+    $('#bien-cod-int').focus();
+  })
+
+  //Cerrar Modal Nuevo Bien, Al presionar los botones cerrar y cancelar.
+  $('.bien-cancelar').on('click', function() {
+    $('#bien-form').trigger("reset");
+    $('#nuevo-bien').modal('hide');
+  });
+
+
+  $('#nuevo-bien').on('hide.bs.modal', function(){
+    $('#bien-form').trigger("reset");
+  });
+
 });

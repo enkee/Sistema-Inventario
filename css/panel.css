@@ -1,0 +1,23 @@
+#exit {
+    flex           : 1 1 auto;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+/* NavBar Comandos */
+
+#comandos .navbar-brand h1 {
+    font-size    : 1.5rem;
+    /*line-height: 1rem;*/
+    margin       : 0;
+    padding      : 0;
+}
+
+.contenedor{
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+body{
+   
+}

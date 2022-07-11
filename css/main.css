@@ -174,7 +174,7 @@ MOBILE FIRST
 }
 
 /* Formulario Nuevo Bien */
-#obligatorio{
+.obligatorio{
     color: red;
     font-weight: bold;
     font-size: 1.5rem;
@@ -194,9 +194,10 @@ MOBILE FIRST
     display        : flex;
     flex-direction : row;
     justify-content: space-between;
+    
 }
 
-.formulario div span {
+.formulario div span, input[type=checkbox] {
     margin-right: 0.5rem;
     margin-left: 0.5rem;
     margin-bottom: 1rem;
